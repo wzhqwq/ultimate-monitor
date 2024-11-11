@@ -1,50 +1,11 @@
-# React + TypeScript + Vite
+# Ultimate Monitor
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+原本是想用来实时展示实验重建效果，并安排一系列实验计划的，但因为太麻烦被搁置了
 
-Currently, two official plugins are available:
+现在被设计成用来查看实验结果的，仍在开发中，未来可能会加入实验计划的功能
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+点云文件命名规则：`debug_ep<步长>_pc_<点数量>.ply`
 
-## Expanding the ESLint configuration
+重建模型文件命名规则：`obj<物体序号>_ep<步长>_mesh.obj`
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+为啥要这么命名呢，因为我的实验是这么输出的
